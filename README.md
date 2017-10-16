@@ -1,6 +1,6 @@
 # Before you judge the code
 
-Please note this app was created after learning Java programming language for approximately 2 months. In addition the Spark micro framework with Thymeleaf template engine was not the best fit.  But as one wise man once said: "Everybody has to start somewhere. You have your whole future ahead of you. Perfection doesn't happen right away."
+Please note this app was created after learning Java programming language for approximately 2 months (May 2017). In addition the Spark micro framework with Thymeleaf template engine was not the best fit.  But as one wise man once said: "Everybody has to start somewhere. You have your whole future ahead of you. Perfection doesn't happen right away."
 
 
 ## Events app on WEB!
