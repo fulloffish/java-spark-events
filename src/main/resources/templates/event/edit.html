@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <title>Eventory</title>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-md-4"></div>
+
+        <div class="col-md-4">
+            <h1> My super web app</h1>
+        </div>
+
+        <div class="col-md-4"></div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+            <h2> Edit super event</h2>
+        </div>
+        <div class="col-md-4"></div>
+    </div>
+
+    <div class="row" >
+        <div class="col-md-4"></div>
+        <div class="col-md-4" th:each="event: ${event}">
+            <form class="form-group" method="post"  th:action="'/edit/'+ ${event.getId()}">
+                <label for="name">New name</label>
+                <input class="form-control" type="text" name="name" id="name" th:value="${event.getName()}" required>
+
+                <label for="date">New date</label>
+                <input class="form-control" type="date" name="date" id="date" th:value="${event.getDate()}"required>
+
+                <label for="description">New Description</label>
+                <textarea rows="5" cols="5" class="form-control" type="text"
+                          name="description" id="description" th:text="${event.getDescription()}" required></textarea>
+
+                <label for="category">New Category</label>
+                <input class="form-control" type="text" name="category" id="category" th:value="${event.getCategory()}">
+
+                <label for="link">Link (optional)</label>
+                <input class="form-control" type="text" name="link" id="link" th:value="${event.getLink()}">
+
+                <button class="btn btn" type="submit">SUBMIT</button>
+            </form>
+        </div>
+        <div class="col-md-4"></div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+            <a href="/">
+                <button class="btn btn-default">< BACK</button>
+            </a>
+        </div>
+        <div class="col-md-4"></div>
+    </div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>
